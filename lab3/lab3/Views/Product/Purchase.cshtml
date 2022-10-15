@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "Purchase";
+}
+
+<h2>Purchase Product</h2>
+
+<div class="row g-5">
+    <div class="col-md-5 col-lg-8 order-md-last">
+        <div class="bd-example">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Cart</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>@product.id</td>
+                            <td>@product.name</td>
+                            <td>@product.price</td>
+                            <td>@product.quantity</td>
+                            <td><a href="/product/AddToCart/@product.id" class="btn btn-success">Add to cart</a></td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <div class="col-md-7 col-lg-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">Your cart</span>
+        </h4>
+        <div class="bd-example">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Product ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Unit Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @if (!string.IsNullOrEmpty(Session["ProductCart"] as string))
+                    {
+                        foreach (var cart in ViewBag.cart)
+                        {
+                            <tr>
+                                <td>@cart.id</td>
+                                <td>@cart.name</td>
+                                <td>@cart.price</td>
+                                <td>@cart.quantity</td>
+                                <td><a href="/product/RemoveItemFromCart/@cart.id" class="btn btn-danger">Remove</a></td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4">Your cart is empty.</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+        <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                    <h6 class="my-0">Total Amount</h6>
+                </div>
+                <span class="text-muted">$@Session["TotalPrice"]</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+                <a class="btn btn-primary form-control" href="/product/checkout">Checkout</a>
+            </li>
+        </ul>
+    </div>
+</div>
+

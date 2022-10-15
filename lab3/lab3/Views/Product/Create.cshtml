@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create New Product</h2>
+
+<form action="/Product/Create" method="post">
+
+    <label for="Name">Name: </label>
+    <input class="form-control" type="text" id="name" name="name" value="" placeholder="Enter product name" />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span><br />
+
+    <label for="Price">Price: </label>
+    <input class="form-control" type="text" id="Price" name="price" value="" placeholder="Enter product price" />
+    <span class="text-danger">@Html.ValidationMessage("Price")</span><br />
+
+    <label for="Quantity">Quantity: </label>
+    <input class="form-control" type="text" id="Quantity" name="quantity" value="" placeholder="Enter quantity of the product" />
+    <span class="text-danger">@Html.ValidationMessage("Quantity")</span><br />
+
+    <input class="form-control btn btn-success" type="submit" name="Submit" value="Submit" />
+
+</form>
+

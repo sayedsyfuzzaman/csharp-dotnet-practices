@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+}
+
+<h2>Registration</h2>
+
+
+<form action="/Vaccine/Registration" method="post">
+
+    <label for="Name">Name: </label>
+    <input class="form-control" type="text" id="Name" name="Name" value="" placeholder="Enter your name" />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span><br />
+
+    <label for="Name">Email: </label>
+    <input class="form-control" type="text" id="Email" name="Email" value="" placeholder="Enter your email" />
+    <span class="text-danger">@Html.ValidationMessage("Email")</span><br />
+
+    <label for="Phone">Phone:</label>
+    <input class="form-control" type="text" id="Phone" name="Phone" value="" placeholder="Enter your phone number" />
+    <span class="text-danger">@Html.ValidationMessage("Phone")</span><br />
+
+    <label for="DOB">Date of birth::</label>
+    <input class="form-control" type="date" id="DOB" name="DOB" value="" placeholder="Date of Birth" />
+    <span class="text-danger">@Html.ValidationMessage("DOB")</span><br />
+
+    <label for="BloodGroup">Blood Group: </label>
+    <select class="form-control" name="BloodGroup" id="BloodGroup">
+        <option value="A+(ve)">A+</option>
+        <option value="A-(ve)">A-</option>
+        <option value="B+(ve)">B+</option>
+        <option value="B-(ve)">B-</option>
+        <option value="AB+(ve)">AB+</option>
+        <option value="AB-(ve)">AB-</option>
+        <option value="O+(ve)">O+-</option>
+        <option value="O-(ve)">O-</option>
+    </select>
+    <span class="text-danger">@Html.ValidationMessage("BloodGroup")</span><br />
+
+    <label>Gender: </label><br />
+    <input type="radio" id="Male" name="Gender" value="Male" />
+    <label for="Male">Male</label>
+    <input type="radio" id="Female" name="Gender" value="Female" />
+    <label for="Female">Female</label><br />
+    <span class="text-danger">@Html.ValidationMessage("Gender")</span><br />
+
+    <label for="Password">Password: </label>
+    <input class="form-control" type="password" id="Password" name="Password" value="" placeholder="Password" />
+    <span class="text-danger">@Html.ValidationMessage("Password")</span><br />
+
+    <label for="ConfirmPassword">Re enter password: </label>
+    <input class="form-control" type="password" id="ConfirmPassword" name="ConfirmPassword" value="" placeholder="Password" />
+    <span class="text-danger">@Html.ValidationMessage("ConfirmPassword")</span><br />
+
+    <input class="form-control btn btn-success" type="submit" name="Submit" value="Submit" />
+
+</form>
