@@ -1,0 +1,12 @@
+F:\C# .NET\News\BLL\bin\Debug\BLL.dll
+F:\C# .NET\News\BLL\bin\Debug\BLL.pdb
+F:\C# .NET\News\BLL\bin\Debug\DAL.dll
+F:\C# .NET\News\BLL\bin\Debug\DAL.pdb
+F:\C# .NET\News\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+F:\C# .NET\News\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+F:\C# .NET\News\BLL\obj\Debug\BLL.csproj.CopyComplete
+F:\C# .NET\News\BLL\obj\Debug\BLL.dll
+F:\C# .NET\News\BLL\obj\Debug\BLL.pdb
+F:\C# .NET\News\BLL\bin\Debug\EntityFramework.dll
+F:\C# .NET\News\BLL\bin\Debug\DAL.dll.config
+F:\C# .NET\News\BLL\bin\Debug\EntityFramework.xml
